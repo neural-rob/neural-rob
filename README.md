@@ -7,10 +7,6 @@
 
 <p>
   <a href="https://www.neuralnetwork.eu"><b>neuralnetwork.eu</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/CHANGE-ME">LinkedIn</a>
-  &nbsp;·&nbsp;
-  <a href="mailto:r.oculisti@neuralnetwork.eu">r.oculisti@neuralnetwork.eu</a>
 </p>
 
 </div>
@@ -114,6 +110,6 @@ alerting pipelines
     <sub>IT &amp; Security System Integrator — Firenze, Italy</sub>
   </p>
   <p>
-    <sub><a href="https://www.neuralnetwork.eu">www.neuralnetwork.eu</a></sub>
+    <sub>Enquiries via <a href="https://www.neuralnetwork.eu">www.neuralnetwork.eu</a></sub>
   </p>
 </div>
