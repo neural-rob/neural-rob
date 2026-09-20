@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 110" width="900" height="110" role="img" aria-label="Neuralnetwork Srl - IT and Security System Integrator, Firenze Italy">
   <rect x="0" y="0" width="900" height="110" fill="#17232B"/>
-  <rect x="0" y="0" width="900" height="3" fill="#8DC642"/>
+  <rect x="0" y="0" width="5" height="110" fill="#8DC642"/>
   <text x="38" y="54" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" textLength="229.5" lengthAdjust="spacingAndGlyphs">NEURALNETWORK SRL</text>
   <text x="40" y="80" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#8DC642" textLength="226.8" lengthAdjust="spacingAndGlyphs">IT &amp; SECURITY SYSTEM INTEGRATOR</text>
   <text x="862" y="54" text-anchor="end" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13" font-weight="400" fill="#95A3A9" textLength="261.5" lengthAdjust="spacingAndGlyphs">Infrastructure · Security · Cloud · Engineering</text>

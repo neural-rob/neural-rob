@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """Genera gli asset SVG del profilo GitHub neural-rob.
 
+Quattro pannelli scuri autoportanti (header, layers, stack, footer): stesso fondo,
+stessa barra verde a sinistra, nessuna variante chiaro/scuro da mantenere.
+
 Nessuna dipendenza esterna e nessun servizio di terze parti: ogni testo porta un
 textLength calcolato su metriche Helvetica-like (sans) e su avanzamento fisso
 0.6em (mono), cosi' il layout regge qualunque font trovi il browser del visitatore.
@@ -16,8 +19,22 @@ os.makedirs(OUT, exist_ok=True)
 SANS = "Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif"
 MONO = "&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
-# ---------------------------------------------------------------- metriche ---
-_W = {
+W = 900          # larghezza logica di tutti i pannelli
+BAR = 5          # barra verde a sinistra
+
+# --------------------------------------------------------------- palette ---
+INK = "#17232B"          # fondo pannello
+EDGE = "#2A3A44"         # filetti interni
+BRAND = "#8DC642"        # verde corporate — solo riempimento, mai testo su chiaro
+TITLE = "#FFFFFF"
+BODY = "#C3CFD5"
+MUTED = "#7D8C94"
+CHIP_BG = "#1C2A33"
+CHIP_EDGE = "#33454F"
+CHIP_TX = "#DCE4E8"
+
+# -------------------------------------------------------------- metriche ---
+_M = {
     **{c: w for c, w in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ",
        [.667, .667, .722, .722, .667, .611, .778, .722, .278, .5, .667, .556, .833,
         .722, .778, .667, .778, .722, .667, .611, .722, .667, .944, .667, .667, .611])},
@@ -30,29 +47,39 @@ _W = {
 }
 
 
-def w_sans(text, size, weight=400, tracking=0.0):
+def w_sans(s, size, weight=400, tracking=0.0):
     f = 1.045 if weight >= 600 else 1.0
-    return sum(_W.get(c, .55) for c in text) * size * f + tracking * size * max(len(text) - 1, 0)
+    return sum(_M.get(c, .55) for c in s) * size * f + tracking * size * max(len(s) - 1, 0)
 
 
-def w_mono(text, size, tracking=0.0):
-    return len(text) * 0.6 * size + tracking * size * max(len(text) - 1, 0)
+def w_mono(s, size, tracking=0.0):
+    return len(s) * 0.6 * size + tracking * size * max(len(s) - 1, 0)
+
+
+def _text(family, width_fn, x, y, s, size, weight, fill, tracking, anchor):
+    tl = round(width_fn(s, size, tracking) if family is MONO
+               else width_fn(s, size, weight, tracking), 1)
+    a = f' text-anchor="{anchor}"' if anchor else ""
+    return (f'<text x="{x}" y="{y}"{a} font-family="{family}" font-size="{size}" '
+            f'font-weight="{weight}" fill="{fill}" textLength="{tl}" '
+            f'lengthAdjust="spacingAndGlyphs">{s.replace("&", "&amp;")}</text>')
 
 
 def t_sans(x, y, s, size, weight, fill, tracking=0.0, anchor=None):
-    tl = round(w_sans(s, size, weight, tracking), 1)
-    a = f' text-anchor="{anchor}"' if anchor else ""
-    return (f'<text x="{x}" y="{y}"{a} font-family="{SANS}" font-size="{size}" '
-            f'font-weight="{weight}" fill="{fill}" textLength="{tl}" '
-            f'lengthAdjust="spacingAndGlyphs">{s.replace("&", "&amp;")}</text>')
+    return _text(SANS, w_sans, x, y, s, size, weight, fill, tracking, anchor)
 
 
 def t_mono(x, y, s, size, weight, fill, tracking=0.0, anchor=None):
-    tl = round(w_mono(s, size, tracking), 1)
-    a = f' text-anchor="{anchor}"' if anchor else ""
-    return (f'<text x="{x}" y="{y}"{a} font-family="{MONO}" font-size="{size}" '
-            f'font-weight="{weight}" fill="{fill}" textLength="{tl}" '
-            f'lengthAdjust="spacingAndGlyphs">{s.replace("&", "&amp;")}</text>')
+    return _text(MONO, w_mono, x, y, s, size, weight, fill, tracking, anchor)
+
+
+def panel(h, body, label):
+    """Cornice comune: fondo scuro a piena larghezza e barra verde a sinistra."""
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" width="{W}" '
+            f'height="{h}" role="img" aria-label="{label}">\n'
+            f'  <rect x="0" y="0" width="{W}" height="{h}" fill="{INK}"/>\n'
+            f'  <rect x="0" y="0" width="{BAR}" height="{h}" fill="{BRAND}"/>\n'
+            + body + "\n</svg>\n")
 
 
 def write(name, svg):
@@ -63,20 +90,7 @@ def write(name, svg):
     print("OK", name, os.path.getsize(path), "bytes")
 
 
-# ------------------------------------------------------------------ palette ---
-INK = "#17232B"        # slab
-INK_EDGE = "#2A3A44"   # filetti dentro lo slab
-BRAND = "#8DC642"      # verde corporate, solo riempimento
-LIGHT = {
-    "accent": "#4D7320", "text": "#3E3E3E", "muted": "#8A938D",
-    "rule": "#E3E7DE", "chip_bg": "#FFFFFF", "chip_edge": "#D8DDD3", "chip_tx": "#3E3E3E",
-}
-DARK = {
-    "accent": "#8DC642", "text": "#C9D1D9", "muted": "#6E7681",
-    "rule": "#21262D", "chip_bg": "#0D1117", "chip_edge": "#30363D", "chip_tx": "#C9D1D9",
-}
-
-# ------------------------------------------------------------------- header ---
+# ---------------------------------------------------------------- header ---
 META = [
     ("LOCATION", "Firenze, Italy"),
     ("COMPANY",  "Neuralnetwork Srl"),
@@ -90,20 +104,19 @@ def header():
         y = 80 + i * 26
         rows.append("  " + t_mono(586, y, k, 10.5, 600, BRAND, tracking=0.12))
         rows.append("  " + t_mono(694, y, v, 11, 400, "#E6EDF3"))
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" role="img" aria-label="Rob O - Infrastructure and Security Architect, Neuralnetwork Srl, Firenze Italy">
-  <rect x="0" y="0" width="900" height="200" fill="{INK}"/>
-  <rect x="0" y="0" width="5" height="200" fill="{BRAND}"/>
-  {t_sans(38, 92, "ROB O", 52, 700, "#FFFFFF", tracking=0.01)}
-  {t_sans(40, 126, "INFRASTRUCTURE & SECURITY ARCHITECT", 13, 600, BRAND, tracking=0.19)}
-  {t_sans(40, 156, "Designing, securing and operating production-grade IT infrastructure.", 13.5, 400, "#95A3A9")}
-  <line x1="562" y1="56" x2="562" y2="140" stroke="{INK_EDGE}" stroke-width="1"/>
-  <line x1="678" y1="56" x2="678" y2="140" stroke="{INK_EDGE}" stroke-width="1"/>
-{chr(10).join(rows)}
-</svg>
-"""
+    body = "\n".join([
+        "  " + t_sans(38, 92, "ROB O", 52, 700, TITLE, tracking=0.01),
+        "  " + t_sans(40, 126, "INFRASTRUCTURE & SECURITY ARCHITECT", 13, 600, BRAND, tracking=0.19),
+        "  " + t_sans(40, 156, "Designing, securing and operating production-grade IT infrastructure.",
+                      13.5, 400, "#95A3A9"),
+        f'  <line x1="562" y1="56" x2="562" y2="140" stroke="{EDGE}" stroke-width="1"/>',
+        f'  <line x1="678" y1="56" x2="678" y2="140" stroke="{EDGE}" stroke-width="1"/>',
+    ] + rows)
+    return panel(200, body,
+                 "Rob O - Infrastructure and Security Architect, Neuralnetwork Srl, Firenze Italy")
 
 
-# ------------------------------------------------- defense in depth (layers) ---
+# ------------------------------------------------ defense in depth (layers) ---
 LAYERS = [
     ("PERIMETER",    "Next-gen firewalling, egress control and inbound exposure management"),
     ("SEGMENTATION", "Zoning, VLAN design and east-west policy to contain lateral movement"),
@@ -112,76 +125,86 @@ LAYERS = [
     ("VISIBILITY",   "Monitoring, log retention and alerting that someone actually reads"),
     ("RECOVERY",     "Backup and disaster recovery, with restores tested before they matter"),
 ]
-ROW_H = 40
+ROW = 40
+TOP = 62
 
 
-def layers(t):
-    h = ROW_H * len(LAYERS) + 8
-    parts = [f'  <line x1="8" y1="6" x2="8" y2="{h - 10}" stroke="{t["rule"]}" stroke-width="2"/>']
+def layers():
+    parts = [
+        "  " + t_mono(38, 40, "DEFENSE IN DEPTH", 10.5, 600, BRAND, tracking=0.14),
+        "  " + t_mono(862, 40, f"{len(LAYERS):02d} LAYERS", 10.5, 400, MUTED,
+                      tracking=0.1, anchor="end"),
+        f'  <line x1="38" y1="54" x2="862" y2="54" stroke="{EDGE}" stroke-width="1"/>',
+    ]
     for i, (name, desc) in enumerate(LAYERS):
-        y = 6 + i * ROW_H
-        cy = y + ROW_H / 2
+        cy = TOP + i * ROW + ROW / 2
         parts += [
-            f'  <rect x="4" y="{cy - 7:.0f}" width="9" height="14" fill="{t["accent"]}"/>',
-            "  " + t_mono(34, cy + 4, f"{i + 1:02d}", 11, 400, t["muted"]),
-            "  " + t_mono(72, cy + 4.5, name, 12.5, 600, t["accent"], tracking=0.07),
-            "  " + t_sans(236, cy + 4.5, desc, 13.5, 400, t["text"]),
+            f'  <rect x="38" y="{cy - 6:.0f}" width="3" height="12" fill="{BRAND}"/>',
+            "  " + t_mono(56, cy + 4, f"{i + 1:02d}", 11, 400, MUTED),
+            "  " + t_mono(96, cy + 4.5, name, 12.5, 600, BRAND, tracking=0.07),
+            "  " + t_sans(262, cy + 4.5, desc, 13.5, 400, BODY),
         ]
         if i < len(LAYERS) - 1:
-            parts.append(f'  <line x1="34" y1="{y + ROW_H}" x2="892" y2="{y + ROW_H}" '
-                         f'stroke="{t["rule"]}" stroke-width="1"/>')
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 {h}" width="900" '
-            f'height="{h}" role="img" aria-label="'
-            + "; ".join(f"{n}: {d}" for n, d in LAYERS) + '">\n'
-            + "\n".join(parts) + "\n</svg>\n")
+            y = TOP + (i + 1) * ROW
+            parts.append(f'  <line x1="56" y1="{y}" x2="862" y2="{y}" '
+                         f'stroke="{EDGE}" stroke-width="1"/>')
+    h = TOP + len(LAYERS) * ROW + 24
+    return panel(h, "\n".join(parts),
+                 "Defense in depth: " + "; ".join(f"{n}: {d}" for n, d in LAYERS))
 
 
-# -------------------------------------------------------------- stack strip ---
+# ------------------------------------------------------------ stack panel ---
 STACK = [
-    ["Fortinet", "Cisco", "Cloudflare", "Ubiquiti", "Cambium", "3CX"],
-    ["Debian/Ubuntu", "Windows Server", "Microsoft 365", "Azure", "AWS", "Ansible"],
+    ("NETWORK & SECURITY", ["Fortinet", "Cisco", "Cloudflare", "Ubiquiti", "Cambium"]),
+    ("PLATFORM & CLOUD",   ["Debian/Ubuntu", "Windows Server", "Microsoft 365", "Azure", "AWS"]),
+    ("AUTOMATION & VOICE", ["Ansible", "Python", "Git", "LibreNMS", "3CX"]),
 ]
-CHIP_FS, CHIP_PAD, CHIP_GAP, CHIP_H, CW = 12.5, 16, 10, 30, 900
+CFS, CPAD, CGAP, CH = 12.5, 16, 10, 30
+COL = 240      # dove iniziano i chip
+LBL = 216      # dove finisce la colonna etichette (allineata a destra)
 
 
-def stack(t):
-    h = len(STACK) * (CHIP_H + 10) + 4
-    parts = []
-    for r, row in enumerate(STACK):
-        widths = [round(w_mono(s, CHIP_FS)) + 2 * CHIP_PAD for s in row]
-        x = (CW - (sum(widths) + CHIP_GAP * (len(row) - 1))) / 2
-        y = 4 + r * (CHIP_H + 10)
-        for s, w in zip(row, widths):
+def stack():
+    flat_n = sum(len(i) for _, i in STACK)
+    parts = [
+        "  " + t_mono(38, 40, "TECHNOLOGY", 10.5, 600, BRAND, tracking=0.14),
+        "  " + t_mono(862, 40, "IN PRODUCTION", 10.5, 400, MUTED, tracking=0.1, anchor="end"),
+        f'  <line x1="38" y1="54" x2="862" y2="54" stroke="{EDGE}" stroke-width="1"/>',
+    ]
+    for r, (group, items) in enumerate(STACK):
+        y = 72 + r * 42
+        parts.append("  " + t_mono(LBL, y + 20, group, 10.5, 600, BRAND,
+                                   tracking=0.1, anchor="end"))
+        x = COL
+        for s in items:
+            w = round(w_mono(s, CFS)) + 2 * CPAD
             parts += [
-                f'  <rect x="{x:.1f}" y="{y}" width="{w}" height="{CHIP_H}" rx="3" '
-                f'fill="{t["chip_bg"]}" stroke="{t["chip_edge"]}" stroke-width="1"/>',
-                f'  <rect x="{x:.1f}" y="{y}" width="3" height="{CHIP_H}" fill="{t["accent"]}"/>',
-                "  " + t_mono(round(x + w / 2, 1), y + 20, s, CHIP_FS, 500,
-                              t["chip_tx"], anchor="middle"),
+                f'  <rect x="{x}" y="{y}" width="{w}" height="{CH}" rx="3" '
+                f'fill="{CHIP_BG}" stroke="{CHIP_EDGE}" stroke-width="1"/>',
+                f'  <rect x="{x}" y="{y}" width="3" height="{CH}" fill="{BRAND}"/>',
+                "  " + t_mono(x + w / 2, y + 20, s, CFS, 500, CHIP_TX, anchor="middle"),
             ]
-            x += w + CHIP_GAP
-    flat = [s for row in STACK for s in row]
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {CW} {h}" width="{CW}" '
-            f'height="{h}" role="img" aria-label="{", ".join(flat)}">\n'
-            + "\n".join(parts) + "\n</svg>\n")
+            x += w + CGAP
+    h = 72 + len(STACK) * 42 + 12
+    flat = [s for _, items in STACK for s in items]
+    return panel(h, "\n".join(parts), "Technology: " + ", ".join(flat))
 
 
-# ------------------------------------------------------------------- footer ---
+# ---------------------------------------------------------------- footer ---
 def footer():
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 110" width="900" height="110" role="img" aria-label="Neuralnetwork Srl - IT and Security System Integrator, Firenze Italy">
-  <rect x="0" y="0" width="900" height="110" fill="{INK}"/>
-  <rect x="0" y="0" width="900" height="3" fill="{BRAND}"/>
-  {t_sans(38, 54, "NEURALNETWORK SRL", 17, 700, "#FFFFFF", tracking=0.1)}
-  {t_mono(40, 80, "IT & SECURITY SYSTEM INTEGRATOR", 10.5, 400, BRAND, tracking=0.1)}
-  {t_sans(862, 54, "Infrastructure · Security · Cloud · Engineering", 13, 400, "#95A3A9", anchor="end")}
-  {t_mono(862, 80, "neuralnetwork.eu", 11, 400, "#E6EDF3", anchor="end")}
-</svg>
-"""
+    body = "\n".join([
+        "  " + t_sans(38, 54, "NEURALNETWORK SRL", 17, 700, TITLE, tracking=0.1),
+        "  " + t_mono(40, 80, "IT & SECURITY SYSTEM INTEGRATOR", 10.5, 400, BRAND, tracking=0.1),
+        "  " + t_sans(862, 54, "Infrastructure · Security · Cloud · Engineering",
+                      13, 400, "#95A3A9", anchor="end"),
+        "  " + t_mono(862, 80, "neuralnetwork.eu", 11, 400, "#E6EDF3", anchor="end"),
+    ])
+    return panel(110, body,
+                 "Neuralnetwork Srl - IT and Security System Integrator, Firenze Italy")
 
 
 if __name__ == "__main__":
     write("header.svg", header())
+    write("layers.svg", layers())
+    write("stack.svg", stack())
     write("footer.svg", footer())
-    for name, theme in (("light", LIGHT), ("dark", DARK)):
-        write(f"layers-{name}.svg", layers(theme))
-        write(f"stack-{name}.svg", stack(theme))

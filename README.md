@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="Rob O — Infrastructure &amp; Security Architect" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/header.svg?v=2" width="100%">
+<img alt="Rob O — Infrastructure &amp; Security Architect" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/header.svg?v=3" width="100%">
 
 </div>
 
@@ -17,14 +17,9 @@ turns out to be wrong.
 
 <br>
 
-### Security posture I design and operate
-
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/layers-dark.svg?v=2">
-  <img alt="Defense in depth: perimeter, segmentation, identity, access, visibility, recovery" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/layers-light.svg?v=2" width="100%">
-</picture>
+<img alt="Defense in depth: perimeter, segmentation, identity, access, visibility, recovery" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/layers.svg?v=3" width="100%">
 
 </div>
 
@@ -65,16 +60,13 @@ and what the next one still contains when it does.</sub>
 
 <br>
 
-### Technology
-
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/stack-dark.svg?v=2">
-  <img alt="Fortinet, Cisco, Cloudflare, Ubiquiti, Cambium, 3CX, Debian/Ubuntu, Windows Server, Microsoft 365, Azure, AWS, Ansible" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/stack-light.svg?v=2" width="100%">
-</picture>
+<img alt="Technology: Fortinet, Cisco, Cloudflare, Ubiquiti, Cambium, Debian/Ubuntu, Windows Server, Microsoft 365, Azure, AWS, Ansible, Python, Git, LibreNMS, 3CX" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/stack.svg?v=3" width="100%">
 
 </div>
+
+<br>
 
 <details>
 <summary><b>The full inventory</b></summary>
@@ -119,6 +111,6 @@ alerting and log pipelines
 
 <div align="center">
 
-<a href="https://www.neuralnetwork.eu"><img alt="Neuralnetwork Srl — IT &amp; Security System Integrator, Firenze, Italy" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/footer.svg?v=2" width="100%"></a>
+<a href="https://www.neuralnetwork.eu"><img alt="Neuralnetwork Srl — IT &amp; Security System Integrator, Firenze, Italy" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/footer.svg?v=3" width="100%"></a>
 
 </div>

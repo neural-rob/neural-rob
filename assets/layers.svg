@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 326" width="900" height="326" role="img" aria-label="Defense in depth: PERIMETER: Next-gen firewalling, egress control and inbound exposure management; SEGMENTATION: Zoning, VLAN design and east-west policy to contain lateral movement; IDENTITY: Directory hardening, MFA and conditional access as the real perimeter; ACCESS: Remote access and privileged paths scoped to least privilege; VISIBILITY: Monitoring, log retention and alerting that someone actually reads; RECOVERY: Backup and disaster recovery, with restores tested before they matter">
+  <rect x="0" y="0" width="900" height="326" fill="#17232B"/>
+  <rect x="0" y="0" width="5" height="326" fill="#8DC642"/>
+  <text x="38" y="40" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="122.8" lengthAdjust="spacingAndGlyphs">DEFENSE IN DEPTH</text>
+  <text x="862" y="40" text-anchor="end" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#7D8C94" textLength="65.1" lengthAdjust="spacingAndGlyphs">06 LAYERS</text>
+  <line x1="38" y1="54" x2="862" y2="54" stroke="#2A3A44" stroke-width="1"/>
+  <rect x="38" y="76" width="3" height="12" fill="#8DC642"/>
+  <text x="56" y="86.0" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#7D8C94" textLength="13.2" lengthAdjust="spacingAndGlyphs">01</text>
+  <text x="96" y="86.5" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="600" fill="#8DC642" textLength="74.5" lengthAdjust="spacingAndGlyphs">PERIMETER</text>
+  <text x="262" y="86.5" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#C3CFD5" textLength="430.7" lengthAdjust="spacingAndGlyphs">Next-gen firewalling, egress control and inbound exposure management</text>
+  <line x1="56" y1="102" x2="862" y2="102" stroke="#2A3A44" stroke-width="1"/>
+  <rect x="38" y="116" width="3" height="12" fill="#8DC642"/>
+  <text x="56" y="126.0" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#7D8C94" textLength="13.2" lengthAdjust="spacingAndGlyphs">02</text>
+  <text x="96" y="126.5" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="600" fill="#8DC642" textLength="99.6" lengthAdjust="spacingAndGlyphs">SEGMENTATION</text>
+  <text x="262" y="126.5" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#C3CFD5" textLength="423.2" lengthAdjust="spacingAndGlyphs">Zoning, VLAN design and east-west policy to contain lateral movement</text>
+  <line x1="56" y1="142" x2="862" y2="142" stroke="#2A3A44" stroke-width="1"/>
+  <rect x="38" y="156" width="3" height="12" fill="#8DC642"/>
+  <text x="56" y="166.0" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#7D8C94" textLength="13.2" lengthAdjust="spacingAndGlyphs">03</text>
+  <text x="96" y="166.5" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="600" fill="#8DC642" textLength="66.1" lengthAdjust="spacingAndGlyphs">IDENTITY</text>
+  <text x="262" y="166.5" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#C3CFD5" textLength="421.7" lengthAdjust="spacingAndGlyphs">Directory hardening, MFA and conditional access as the real perimeter</text>
+  <line x1="56" y1="182" x2="862" y2="182" stroke="#2A3A44" stroke-width="1"/>
+  <rect x="38" y="196" width="3" height="12" fill="#8DC642"/>
+  <text x="56" y="206.0" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#7D8C94" textLength="13.2" lengthAdjust="spacingAndGlyphs">04</text>
+  <text x="96" y="206.5" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="600" fill="#8DC642" textLength="49.4" lengthAdjust="spacingAndGlyphs">ACCESS</text>
+  <text x="262" y="206.5" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#C3CFD5" textLength="366.2" lengthAdjust="spacingAndGlyphs">Remote access and privileged paths scoped to least privilege</text>
+  <line x1="56" y1="222" x2="862" y2="222" stroke="#2A3A44" stroke-width="1"/>
+  <rect x="38" y="236" width="3" height="12" fill="#8DC642"/>
+  <text x="56" y="246.0" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#7D8C94" textLength="13.2" lengthAdjust="spacingAndGlyphs">05</text>
+  <text x="96" y="246.5" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="600" fill="#8DC642" textLength="82.9" lengthAdjust="spacingAndGlyphs">VISIBILITY</text>
+  <text x="262" y="246.5" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#C3CFD5" textLength="391.7" lengthAdjust="spacingAndGlyphs">Monitoring, log retention and alerting that someone actually reads</text>
+  <line x1="56" y1="262" x2="862" y2="262" stroke="#2A3A44" stroke-width="1"/>
+  <rect x="38" y="276" width="3" height="12" fill="#8DC642"/>
+  <text x="56" y="286.0" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#7D8C94" textLength="13.2" lengthAdjust="spacingAndGlyphs">06</text>
+  <text x="96" y="286.5" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="600" fill="#8DC642" textLength="66.1" lengthAdjust="spacingAndGlyphs">RECOVERY</text>
+  <text x="262" y="286.5" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#C3CFD5" textLength="415.7" lengthAdjust="spacingAndGlyphs">Backup and disaster recovery, with restores tested before they matter</text>
+</svg>

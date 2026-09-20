@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 210" width="900" height="210" role="img" aria-label="Technology: Fortinet, Cisco, Cloudflare, Ubiquiti, Cambium, Debian/Ubuntu, Windows Server, Microsoft 365, Azure, AWS, Ansible, Python, Git, LibreNMS, 3CX">
+  <rect x="0" y="0" width="900" height="210" fill="#17232B"/>
+  <rect x="0" y="0" width="5" height="210" fill="#8DC642"/>
+  <text x="38" y="40" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="76.2" lengthAdjust="spacingAndGlyphs">TECHNOLOGY</text>
+  <text x="862" y="40" text-anchor="end" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#7D8C94" textLength="94.5" lengthAdjust="spacingAndGlyphs">IN PRODUCTION</text>
+  <line x1="38" y1="54" x2="862" y2="54" stroke="#2A3A44" stroke-width="1"/>
+  <text x="216" y="92" text-anchor="end" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="131.2" lengthAdjust="spacingAndGlyphs">NETWORK &amp; SECURITY</text>
+  <rect x="240" y="72" width="92" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="240" y="72" width="3" height="30" fill="#8DC642"/>
+  <text x="286.0" y="92" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="60.0" lengthAdjust="spacingAndGlyphs">Fortinet</text>
+  <rect x="342" y="72" width="70" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="342" y="72" width="3" height="30" fill="#8DC642"/>
+  <text x="377.0" y="92" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="37.5" lengthAdjust="spacingAndGlyphs">Cisco</text>
+  <rect x="422" y="72" width="107" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="422" y="72" width="3" height="30" fill="#8DC642"/>
+  <text x="475.5" y="92" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="75.0" lengthAdjust="spacingAndGlyphs">Cloudflare</text>
+  <rect x="539" y="72" width="92" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="539" y="72" width="3" height="30" fill="#8DC642"/>
+  <text x="585.0" y="92" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="60.0" lengthAdjust="spacingAndGlyphs">Ubiquiti</text>
+  <rect x="641" y="72" width="84" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="641" y="72" width="3" height="30" fill="#8DC642"/>
+  <text x="683.0" y="92" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="52.5" lengthAdjust="spacingAndGlyphs">Cambium</text>
+  <text x="216" y="134" text-anchor="end" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="116.5" lengthAdjust="spacingAndGlyphs">PLATFORM &amp; CLOUD</text>
+  <rect x="240" y="114" width="130" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="240" y="114" width="3" height="30" fill="#8DC642"/>
+  <text x="305.0" y="134" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="97.5" lengthAdjust="spacingAndGlyphs">Debian/Ubuntu</text>
+  <rect x="380" y="114" width="137" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="380" y="114" width="3" height="30" fill="#8DC642"/>
+  <text x="448.5" y="134" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="105.0" lengthAdjust="spacingAndGlyphs">Windows Server</text>
+  <rect x="527" y="114" width="130" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="527" y="114" width="3" height="30" fill="#8DC642"/>
+  <text x="592.0" y="134" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="97.5" lengthAdjust="spacingAndGlyphs">Microsoft 365</text>
+  <rect x="667" y="114" width="70" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="667" y="114" width="3" height="30" fill="#8DC642"/>
+  <text x="702.0" y="134" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="37.5" lengthAdjust="spacingAndGlyphs">Azure</text>
+  <rect x="747" y="114" width="54" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="747" y="114" width="3" height="30" fill="#8DC642"/>
+  <text x="774.0" y="134" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="22.5" lengthAdjust="spacingAndGlyphs">AWS</text>
+  <text x="216" y="176" text-anchor="end" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="131.2" lengthAdjust="spacingAndGlyphs">AUTOMATION &amp; VOICE</text>
+  <rect x="240" y="156" width="84" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="240" y="156" width="3" height="30" fill="#8DC642"/>
+  <text x="282.0" y="176" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="52.5" lengthAdjust="spacingAndGlyphs">Ansible</text>
+  <rect x="334" y="156" width="77" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="334" y="156" width="3" height="30" fill="#8DC642"/>
+  <text x="372.5" y="176" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="45.0" lengthAdjust="spacingAndGlyphs">Python</text>
+  <rect x="421" y="156" width="54" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="421" y="156" width="3" height="30" fill="#8DC642"/>
+  <text x="448.0" y="176" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="22.5" lengthAdjust="spacingAndGlyphs">Git</text>
+  <rect x="485" y="156" width="92" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="485" y="156" width="3" height="30" fill="#8DC642"/>
+  <text x="531.0" y="176" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="60.0" lengthAdjust="spacingAndGlyphs">LibreNMS</text>
+  <rect x="587" y="156" width="54" height="30" rx="3" fill="#1C2A33" stroke="#33454F" stroke-width="1"/>
+  <rect x="587" y="156" width="3" height="30" fill="#8DC642"/>
+  <text x="614.0" y="176" text-anchor="middle" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12.5" font-weight="500" fill="#DCE4E8" textLength="22.5" lengthAdjust="spacingAndGlyphs">3CX</text>
+</svg>
