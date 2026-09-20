@@ -1,85 +1,101 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/header-dark.svg?v=1">
-  <img alt="Rob O — Infrastructure &amp; Security Architect" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/header-light.svg?v=1" width="100%">
-</picture>
-
-<p>
-  <a href="https://www.neuralnetwork.eu"><b>neuralnetwork.eu</b></a>
-</p>
+<img alt="Rob O — Infrastructure &amp; Security Architect" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/header.svg?v=2" width="100%">
 
 </div>
 
----
+<br>
 
-I work across infrastructure architecture, networking, cybersecurity and cloud, with a
-focus on secure, reliable and maintainable production environments.
+I design, build and operate the infrastructure businesses actually depend on — and the
+controls that keep it standing when something goes wrong.
 
-My work spans architecture, implementation and operations — from network and security
-infrastructure to cloud platforms, automation and internal software.
+Most of my work is in production environments for Italian SMEs and holding groups, where
+I act as the external technical lead across network and security architecture, cloud
+platforms, identity and automation. The interesting part is rarely the deployment: it is
+the failure modes, the blast radius, and what still works at 3 a.m. when one assumption
+turns out to be wrong.
 
 <br>
 
-### What I do
+### Security posture I design and operate
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/layers-dark.svg?v=2">
+  <img alt="Defense in depth: perimeter, segmentation, identity, access, visibility, recovery" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/layers-light.svg?v=2" width="100%">
+</picture>
+
+</div>
+
+<sub>No single layer is the control. The design question is always which one fails first,
+and what the next one still contains when it does.</sub>
+
+<br>
+<br>
+
+### What I get called in for
 
 <table>
 <tr>
   <td width="50%" valign="top">
-    <b>Infrastructure architecture</b><br>
-    <sub>Systems designed to survive day 2: capacity, failure domains, upgrade paths,
-    documented handover.</sub>
+    <b>Architecture &amp; design</b><br>
+    <sub>Greenfield and rebuild: topology, failure domains, capacity, upgrade paths, and
+    documentation the next engineer can actually work from.</sub>
   </td>
   <td width="50%" valign="top">
-    <b>Network &amp; security</b><br>
-    <sub>Perimeter and internal segmentation, secure remote access, egress control,
-    monitoring and incident response.</sub>
+    <b>Security review &amp; hardening</b><br>
+    <sub>Threat model first, then segmentation, egress control, identity and privileged
+    access — with the findings ranked by blast radius, not by scanner severity.</sub>
   </td>
 </tr>
 <tr>
   <td valign="top">
     <b>Cloud &amp; hybrid</b><br>
-    <sub>Landing zones, identity, hybrid connectivity and workload placement across
-    public cloud and on-prem.</sub>
+    <sub>Landing zones, identity integration, hybrid connectivity and workload placement
+    across public cloud and on-prem, without pretending the WAN doesn't exist.</sub>
   </td>
   <td valign="top">
-    <b>Automation &amp; operations</b><br>
-    <sub>Infrastructure as code, configuration management, NOC tooling and the boring
-    glue that keeps estates consistent.</sub>
+    <b>Managed operations</b><br>
+    <sub>MSP and NOC delivery: monitoring, firmware and patch lifecycle, backup with
+    tested restores, and a change trail that survives an audit.</sub>
   </td>
 </tr>
 </table>
 
 <br>
 
-### Core technologies
+### Technology
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/stack-dark.svg?v=1">
-  <img alt="Fortinet · Cisco · Linux · Microsoft · Azure · AWS · Cloudflare · Ansible" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/stack-light.svg?v=1" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/stack-dark.svg?v=2">
+  <img alt="Fortinet, Cisco, Cloudflare, Ubiquiti, Cambium, 3CX, Debian/Ubuntu, Windows Server, Microsoft 365, Azure, AWS, Ansible" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/stack-light.svg?v=2" width="100%">
 </picture>
 
 </div>
 
 <details>
-<summary><b>The full stack</b></summary>
+<summary><b>The full inventory</b></summary>
 
 <br>
 
-**Network &amp; security** — FortiGate, FortiManager, FortiAnalyzer, Cisco Catalyst and Nexus,
-IPsec and SSL VPN, SD-WAN, 802.1X, network segmentation, Cloudflare (WAF, Zero Trust, DNS)
+**Network &amp; security** — FortiGate, FortiManager, FortiAnalyzer, Cisco Catalyst and
+Nexus, MikroTik, IPsec and SSL VPN, SD-WAN, 802.1X, network segmentation, Cloudflare
+(WAF, Zero Trust, DNS)
 
-**Wireless &amp; connectivity** — Cambium Networks, Ubiquiti, point-to-point links, campus Wi-Fi
+**Wireless &amp; connectivity** — Cambium Networks, Ubiquiti, point-to-point links,
+campus and warehouse Wi-Fi
 
 **Systems** — Debian/Ubuntu, Windows Server, Active Directory, Remote Desktop Services,
 virtualization and storage
 
-**Cloud** — Azure, AWS, Hetzner, DigitalOcean, Microsoft 365 and Entra ID
+**Cloud &amp; identity** — Azure, AWS, Hetzner, DigitalOcean, Microsoft 365, Entra ID,
+SAML and OIDC federation, conditional access
 
-**Automation &amp; tooling** — Ansible, Bash, Python, Git, CI/CD, LibreNMS, monitoring and
-alerting pipelines
+**Automation &amp; observability** — Ansible, Bash, Python, Git, CI/CD, LibreNMS,
+alerting and log pipelines
 
 **Voice** — 3CX
 
@@ -89,27 +105,20 @@ alerting pipelines
 
 ### How I work
 
-- **Threat model before topology.** Every design starts from what can go wrong and how far
-  it spreads, not from the product datasheet.
-- **Least privilege, small blast radius.** Segmentation and scoped credentials are cheaper
-  than incident response.
-- **Trade-offs, not verdicts.** Cost, complexity, risk and maintainability are stated
-  explicitly, so the decision survives the person who made it.
-- **Documented or it didn't happen.** Handover documentation is part of the deliverable,
-  not an afterthought.
-- **Automate the repeatable.** If it gets done twice by hand, it becomes code.
+- **Threat model before topology.** The design starts from what an attacker reaches next,
+  not from the product datasheet.
+- **Blast radius is the metric.** Segmentation and scoped credentials cost a fraction of
+  the incident they contain.
+- **Trade-offs, not verdicts.** Cost, complexity, risk and maintainability go on the
+  table together, so the decision outlives the person who made it.
+- **A backup is a restore you have tested.** Everything else is a belief.
+- **Documented or it didn't happen.** The handover pack is part of the deliverable, not
+  an afterthought.
 
 <br>
 
----
-
 <div align="center">
-  <p>
-    <b>NEURALNETWORK SRL</b><br>
-    <sub>Infrastructure · Security · Cloud · Engineering</sub><br>
-    <sub>IT &amp; Security System Integrator — Firenze, Italy</sub>
-  </p>
-  <p>
-    <sub>Enquiries via <a href="https://www.neuralnetwork.eu">www.neuralnetwork.eu</a></sub>
-  </p>
+
+<a href="https://www.neuralnetwork.eu"><img alt="Neuralnetwork Srl — IT &amp; Security System Integrator, Firenze, Italy" src="https://raw.githubusercontent.com/neural-rob/neural-rob/main/assets/footer.svg?v=2" width="100%"></a>
+
 </div>

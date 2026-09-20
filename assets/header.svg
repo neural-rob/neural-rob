@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" role="img" aria-label="Rob O - Infrastructure and Security Architect, Neuralnetwork Srl, Firenze Italy">
+  <rect x="0" y="0" width="900" height="200" fill="#17232B"/>
+  <rect x="0" y="0" width="5" height="200" fill="#8DC642"/>
+  <text x="38" y="92" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="52" font-weight="700" fill="#FFFFFF" textLength="177.2" lengthAdjust="spacingAndGlyphs">ROB O</text>
+  <text x="40" y="126" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#8DC642" textLength="375.3" lengthAdjust="spacingAndGlyphs">INFRASTRUCTURE &amp; SECURITY ARCHITECT</text>
+  <text x="40" y="156" font-family="Inter,&apos;Segoe UI&apos;,system-ui,-apple-system,Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#95A3A9" textLength="412.7" lengthAdjust="spacingAndGlyphs">Designing, securing and operating production-grade IT infrastructure.</text>
+  <line x1="562" y1="56" x2="562" y2="140" stroke="#2A3A44" stroke-width="1"/>
+  <line x1="678" y1="56" x2="678" y2="140" stroke="#2A3A44" stroke-width="1"/>
+  <text x="586" y="80" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="59.2" lengthAdjust="spacingAndGlyphs">LOCATION</text>
+  <text x="694" y="80" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#E6EDF3" textLength="92.4" lengthAdjust="spacingAndGlyphs">Firenze, Italy</text>
+  <text x="586" y="106" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="51.7" lengthAdjust="spacingAndGlyphs">COMPANY</text>
+  <text x="694" y="106" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#E6EDF3" textLength="112.2" lengthAdjust="spacingAndGlyphs">Neuralnetwork Srl</text>
+  <text x="586" y="132" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#8DC642" textLength="36.5" lengthAdjust="spacingAndGlyphs">FOCUS</text>
+  <text x="694" y="132" font-family="&apos;IBM Plex Mono&apos;,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#E6EDF3" textLength="165.0" lengthAdjust="spacingAndGlyphs">Infrastructure &amp; Security</text>
+</svg>
